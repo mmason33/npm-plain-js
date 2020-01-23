@@ -1,6 +1,6 @@
 {
   "name": "@mmason/plain-js",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mmason33/NpmPlain.git"
+    "url": "git+https://github.com/mmason33/npm-plain-js.git"
   },
   "author": "mmason",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mmason33/NpmPlain/issues"
+    "url": "https://github.com/mmason33/npm-plain-js/issues"
   },
-  "homepage": "https://github.com/mmason33/NpmPlain#readme.md"
+  "homepage": "https://github.com/mmason33/npm-plain-js#README.md",
+  "readme": "./README.md"
 }

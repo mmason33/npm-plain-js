@@ -31,10 +31,20 @@ export default class BaseClass {
      * @returns void
      */
     setProps(args) {
-        if (!args) return false
-        Object.keys(args).forEach(key => {
-            this[key] = args[key] || null
-        })
+        if (!args  && !this.rootElement.dataset) return false
+
+        if (this.rootElement.dataset) {
+          const dataset = this.rootElement.dataset
+          Object.keys(dataset).forEach(key => {
+            this[key] = dataset[key] || null
+          })
+        }
+        
+        if(args) {
+          Object.keys(args).forEach(key => {
+              this[key] = args[key] || null;
+          })
+        }
 
         this.setRefs()
     }

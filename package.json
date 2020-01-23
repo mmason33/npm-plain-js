@@ -1,6 +1,6 @@
 {
   "name": "@mmason/plain-js",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/mmason33/NpmPlain/issues"
   },
-  "homepage": "https://github.com/mmason33/NpmPlain#readme"
+  "homepage": "https://github.com/mmason33/NpmPlain#readme.md"
 }

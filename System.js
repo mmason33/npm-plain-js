@@ -5,7 +5,7 @@
 export default class System {
     constructor(classesObject) {
         this.classesObject = classesObject;
-        this.modules = document.querySelectorAll('[data-plain-module]');
+        this.modules = document.querySelectorAll('[data-plain-js-module]');
         return this;
     }
 
@@ -15,11 +15,11 @@ export default class System {
      */
     init() {
         Array.from(this.modules).map(rootElement => {
-            const args = rootElement.dataset.plainArgs
-                ? JSON.parse(rootElement.dataset.plainArgs)
+            const args = rootElement.dataset.plainJsArgs
+                ? JSON.parse(rootElement.dataset.plainJsArgs)
                 : {};
-            args.refs = rootElement.dataset.plainRefs
-                ? JSON.parse(rootElement.dataset.plainRefs)
+            args.refs = rootElement.dataset.plainJsRefs
+                ? JSON.parse(rootElement.dataset.plainJsRefs)
                 : {};
             return new this.classesObject[rootElement.dataset.plainModule](
                 rootElement,

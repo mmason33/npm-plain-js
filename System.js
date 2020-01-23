@@ -21,7 +21,7 @@ export default class System {
             args.refs = rootElement.dataset.plainJsRefs
                 ? JSON.parse(rootElement.dataset.plainJsRefs)
                 : {};
-            return new this.classesObject[rootElement.dataset.plainModule](
+            return new this.classesObject[rootElement.dataset.plainJsModule](
                 rootElement,
                 args
             );

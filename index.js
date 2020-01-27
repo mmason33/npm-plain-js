@@ -1,4 +1,2 @@
-import BaseClass from './BaseClass';
-import System from './System';
-
-export { System, BaseClass };
+export class BaseClass{constructor(a,b){this.setRootElement(a),this.setProps(b)}emit(a,b,c){a.dispatchEvent(new CustomEvent(b,{detail:c}))}setProps(a){return!!a&&void(Object.keys(a).forEach(b=>{this[b]=a[b]||null}),this.setRefs())}setRefs(){return!!this.refs&&void Object.keys(this.refs).forEach(a=>{this.refs[a]=document.querySelector(this.refs[a])})}hasRefs(){return!!this.refs}setRootElement(a){if(!a)throw new Error("Each constructor needs a root entry DOM node");this.rootElement=a}}
+export class System{constructor(a){return this.classesObject=a,this.modules=document.querySelectorAll("[data-plain-js-module]"),this}init(){Array.from(this.modules).map(a=>{const b=a.dataset.plainJsArgs?JSON.parse(a.dataset.plainJsArgs):{};return b.refs=a.dataset.plainJsRefs?JSON.parse(a.dataset.plainJsRefs):{},new this.classesObject[a.dataset.plainJsModule](a,b)})}}

@@ -2,7 +2,7 @@
  * @class System
  * @param {object} classesObject A object containing the components class references
  */
-export default class System {
+export class System {
     constructor(classesObject) {
         this.classesObject = classesObject;
         this.modules = document.querySelectorAll('[data-plain-js-module]');

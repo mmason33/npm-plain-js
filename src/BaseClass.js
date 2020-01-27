@@ -3,7 +3,7 @@
  * @param {node} rootElement Root entry point for the component, the highest html element wrapper => The html element that has the "data-plain-module" attribute
  * @param {object} args Arguments/options to passed to component constructor => "data-plain-args" attribute
  */
-export default class BaseClass {
+export class BaseClass {
     constructor(rootElement, args) {
         // Automate setting of properties through component "super" call
         this.setRootElement(rootElement)
